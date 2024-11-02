@@ -1,6 +1,7 @@
 # DREAM TEAM SELECTOR
 PyQt5 User Interface Class for Dream Team Selector
 This code defines a PyQt5 GUI (graphical user interface) application for selecting a dream sports team, likely for fantasy sports or a similar game. The main UI is structured around selecting and organizing team members within various roles, displaying points, and handling various menu actions.
+
 1. Main Window Setup (setupUi)
 The Ui_MainWindow class is the core UI component, with setupUi() setting up the layout, widgets, and basic properties for the main window.
 
@@ -17,6 +18,7 @@ Labels, Input Fields, and Spacers
 Labels (label_4, label_6, etc.): These labels show category names for team roles (Batsmen, Bowlers, All-Rounders, Wicketkeepers) in bold font.
 Input Fields (e1, e2, etc.): These are QLineEdit widgets that display numbers or other information relevant to each role (disabled by default).
 Spacers: Used to control spacing within the layout to keep widgets aligned.
+
 2. Role Selection (Radio Buttons)
 A QGroupBox is created with four radio buttons (rb1, rb2, rb3, and rb4), allowing users to select player roles:
 
@@ -26,6 +28,7 @@ Player Categories:
 "AR" for All-Rounders
 "WK" for Wicketkeepers
 Each radio button connects to the ctg function (likely categorizing players by role).
+
 3. Player Lists (QListWidget)
 Available Players (list1):
 
@@ -36,6 +39,7 @@ Selected Players (list2):
 
 Displays selected players within the team.
 Similar styling to list1 and connects to removelist2() for removal functionality.
+
 4. Point Management
 Points Display and Update:
 
@@ -45,6 +49,7 @@ Attribute Variables:
 
 Four attributes manage the count of each player type: bat, bwl, ar, and wk.
 avl (available points, initially 1000) and used (points used) track points allocation.
+ 
  5. Menu Bar
 The menu includes File and Help options, each with specific actions:
 
@@ -57,6 +62,7 @@ Function Connection: The menu connects to menufunction, which likely defines spe
 Help Menu:
 Rules: Provides game rules.
 Instructions: Offers usage instructions.
+
 6. Context Menu and Event Connections
 Context Menu: The window is set to use a custom context menu.
 Event Handling:
@@ -64,6 +70,7 @@ Custom Slots:
 ctg: Connected to radio buttons, categorizes selected players.
 removelist1, removelist2: Allow removing items from list1 and list2 on double-click.
 menufunction: Handles menu actions based on File menu selections.
+
 7. retranslateUi() Method
 This method sets text for each widget, making it easier to update language strings or change widget titles.
 
